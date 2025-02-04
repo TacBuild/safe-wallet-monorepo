@@ -22,9 +22,10 @@ const EthHashInfo = ({
 
   return (
     <SrcEthHashInfo
-      prefix={chain?.shortName}
-      copyPrefix={settings.shortName.copy}
+      // prefix={chain?.shortName}
+      // copyPrefix={settings.shortName.copy}
       {...props}
+      showPrefix={false}
       name={name}
       isAddressBookName={!!addressBookName}
       customAvatar={props.customAvatar}
