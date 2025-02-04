@@ -42,9 +42,9 @@ export const createOnboard = (
     },
 
     appMetadata: {
-      name: 'Safe{Wallet}',
+      name: 'TAC Safe',
       icon: location.origin + '/images/logo-round.svg',
-      description: 'Safe{Wallet} – smart contract wallet for Ethereum (ex-Gnosis Safe multisig)',
+      description: 'TAC Safe – smart contract wallet for Ethereum (ex-Gnosis Safe multisig)',
     },
 
     connect: {

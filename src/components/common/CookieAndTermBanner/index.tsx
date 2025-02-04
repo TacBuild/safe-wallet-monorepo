@@ -17,7 +17,7 @@ import { selectCookieBanner, openCookieBanner, closeCookieBanner } from '@/store
 
 import css from './styles.module.css'
 import { AppRoutes } from '@/config/routes'
-import ExternalLink from '../ExternalLink'
+import Link from 'next/link'
 
 const COOKIE_AND_TERM_WARNING: Record<CookieAndTermType, string> = {
   [CookieAndTermType.TERMS]: '',
@@ -47,7 +47,7 @@ export const CookieAndTermBanner = ({
   const dispatch = useAppDispatch()
   const cookies = useAppSelector(selectCookies)
 
-  const { register, watch, getValues, setValue } = useForm({
+  const { getValues, setValue } = useForm({
     defaultValues: {
       [CookieAndTermType.TERMS]: true,
       [CookieAndTermType.NECESSARY]: true,
@@ -87,10 +87,13 @@ export const CookieAndTermBanner = ({
           <Grid item xs>
             <Typography variant="body2" mb={2}>
               By browsing this page, you accept our{' '}
-              <ExternalLink href={AppRoutes.terms}>Terms & Conditions</ExternalLink> (last updated{' '}
-              {metadata.last_update_date}) and the use of necessary cookies. By clicking &quot;Accept all&quot; you
-              additionally agree to the use of Beamer and Analytics cookies as listed below.{' '}
-              <ExternalLink href={AppRoutes.cookie}>Cookie policy</ExternalLink>
+              <Link href={AppRoutes.terms}>
+                <u>Terms & Conditions </u>
+              </Link>{' '}
+              and the use of necessary cookies.
+              <Link href={AppRoutes.cookie}>
+                <u>Cookies Policy</u>{' '}
+              </Link>
             </Typography>
 
             <Grid container alignItems="center" gap={4}>
@@ -101,7 +104,7 @@ export const CookieAndTermBanner = ({
                   <Typography variant="body2">Locally stored data for core functionality</Typography>
                 </Box>
 
-                <Box mb={2}>
+                {/* <Box mb={2}>
                   <CookieCheckbox
                     checkboxProps={{ ...register(CookieAndTermType.UPDATES), id: 'beamer' }}
                     label="Beamer"
@@ -121,7 +124,7 @@ export const CookieAndTermBanner = ({
                   <Typography variant="body2">
                     Opt in for Google Analytics cookies to help us analyze app usage patterns.
                   </Typography>
-                </Box>
+                </Box> */}
               </Grid>
             </Grid>
 

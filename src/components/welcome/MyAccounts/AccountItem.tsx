@@ -102,7 +102,7 @@ const AccountItem = ({ onLinkClick, safeItem }: AccountItemProps) => {
                 {name}
               </Typography>
             )}
-            {chain?.shortName}:
+            {/* {chain?.shortName}: */}
             <Typography color="var(--color-primary-light)" fontSize="inherit" component="span">
               {shortenAddress(address)}
             </Typography>

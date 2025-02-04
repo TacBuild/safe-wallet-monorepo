@@ -1,0 +1,12 @@
+diff --git a/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js b/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js
+index 00ae69d..080604e 100644
+--- a/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js
++++ b/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js
+@@ -128,6 +128,7 @@ exports.networks = [
+     { chainId: 2222n, shortName: 'kava' },
+     { chainId: 2331n, shortName: 'rss3-testnet' },
+     { chainId: 2358n, shortName: 'kroma-sepolia' },
++    { chainId: 2390n, shortName: 'tacchain_2390-1' },
+     { chainId: 2810n, shortName: 'hmorph' },
+     { chainId: 3338n, shortName: 'PEAQ' },
+     { chainId: 3636n, shortName: 'BTNX' },
