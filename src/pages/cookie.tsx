@@ -1,35 +1,31 @@
-import { CookieAndTermBanner } from 'src/components/common/CookieAndTermBanner'
-import SettingsHeader from '@/components/settings/SettingsHeader'
-import { Grid, Paper, Typography } from '@mui/material'
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import { COOKIE_LINK } from '@/config/constants'
+import { Typography } from '@mui/material'
+import { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 
-const Cookies: NextPage = () => {
+const CookiePolicy = () => {
+  const [content, setContent] = useState<string>('')
+
+  useEffect(() => {
+    const fetchContent = async () => {
+      try {
+        const response = await fetch(COOKIE_LINK)
+        let text = await response.text()
+        text = text.replace(/\${origin}/g, window.location.origin)
+        setContent(text)
+      } catch (error) {
+        console.error('Error fetching cookie policy:', error)
+      }
+    }
+
+    fetchContent()
+  }, [])
+
   return (
-    <>
-      <Head>
-        <title>Superchain Safe – Settings – Cookies</title>
-      </Head>
-
-      <SettingsHeader />
-
-      <main>
-        <Paper sx={{ p: 4, mb: 2 }}>
-          <Grid container spacing={3}>
-            <Grid item sm={4} xs={12}>
-              <Typography variant="h4" fontWeight={700}>
-                Cookie preferences
-              </Typography>
-            </Grid>
-
-            <Grid item container xs>
-              <CookieAndTermBanner />
-            </Grid>
-          </Grid>
-        </Paper>
-      </main>
-    </>
+    <main>
+      {content ? <ReactMarkdown>{content}</ReactMarkdown> : <Typography>Loading cookie policy...</Typography>}
+    </main>
   )
 }
 
-export default Cookies
+export default CookiePolicy
