@@ -1,5 +1,5 @@
 diff --git a/dist/src/utils/eip-3770/config.js b/dist/src/utils/eip-3770/config.js
-index 0a7a36bb93eda7a8c5f67e823cf4c76b8f7e2d0d..e214e2803d5b5d1969ffa117a02b693d9a21490e 100644
+index 0a7a36bb93eda7a8c5f67e823cf4c76b8f7e2d0d..91b48fec4fd97885fa47a0a60e99e6a92af6f74e 100644
 --- a/dist/src/utils/eip-3770/config.js
 +++ b/dist/src/utils/eip-3770/config.js
 @@ -62,6 +62,7 @@ exports.networks = [
@@ -10,11 +10,12 @@ index 0a7a36bb93eda7a8c5f67e823cf4c76b8f7e2d0d..e214e2803d5b5d1969ffa117a02b693d
      { chainId: 240n, shortName: 'zkTCRO' },
      { chainId: 246n, shortName: 'ewt' },
      { chainId: 250n, shortName: 'ftm' },
-@@ -158,6 +159,7 @@ exports.networks = [
+@@ -158,6 +159,8 @@ exports.networks = [
      { chainId: 2222n, shortName: 'kava' },
      { chainId: 2331n, shortName: 'rss3-testnet' },
      { chainId: 2358n, shortName: 'kroma-sepolia' },
 +    { chainId: 2390n, shortName: 'tacchain_2390-1' },
++    { chainId: 2391n, shortName: 'tacchain_2391-1' },
      { chainId: 2424n, shortName: 'inevm-testnet' },
      { chainId: 2442n, shortName: 'zkevm-testnet-cardona' },
      { chainId: 2741n, shortName: 'abstract' },
