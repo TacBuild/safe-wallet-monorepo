@@ -12,7 +12,7 @@ import { BEAMER_SELECTOR } from '@/services/beamer'
 // import { CookieAndTermType, hasConsentFor } from '@/store/cookiesAndTermsSlice'
 // import { openCookieBanner } from '@/store/popupSlice'
 import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
-import { Link, ListItem, SvgIcon, Typography } from '@mui/material'
+import { Divider, Link, ListItem, SvgIcon, Typography } from '@mui/material'
 import DebugToggle from '../DebugToggle'
 import { HELP_CENTER_URL, IS_PRODUCTION, NEW_SUGGESTION_FORM } from '@/config/constants'
 // import { useCurrentChain } from '@/hooks/useChains'
@@ -39,7 +39,7 @@ const SidebarFooter = (): ReactElement => {
   // }
 
   return (
-    <>
+    <SidebarList>
       {!IS_PRODUCTION && (
         <>
           <ListItem disablePadding>

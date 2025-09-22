@@ -49,10 +49,10 @@ const Sidebar = (): ReactElement => {
         <Divider flexItem />
 
         <SidebarFooter />
-
+        {/* 
         <Divider flexItem />
 
-        <IndexingStatus />
+        <IndexingStatus /> */}
       </div>
       <Drawer variant="temporary" anchor="left" open={isDrawerOpen} onClose={onDrawerToggle}>
         <div className={css.drawer}>
