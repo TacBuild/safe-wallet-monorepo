@@ -1,0 +1,15 @@
+diff --git a/dist/src/utils/eip-3770/config.js b/dist/src/utils/eip-3770/config.js
+index 4babd67809de013214ad0291ed26731a4f132add..fe43e90e26de9fda3c2c05195d7fd2c8f9b215ad 100644
+--- a/dist/src/utils/eip-3770/config.js
++++ b/dist/src/utils/eip-3770/config.js
+@@ -17,6 +17,10 @@ exports.networks = [
+     { chainId: 25n, shortName: 'cro' },
+     { chainId: 28n, shortName: 'bobarinkeby' },
+     { chainId: 30n, shortName: 'rsk' },
++    { chainId: 239n, shortName: 'tac' },
++    { chainId: 2390n, shortName: 'tacchain_2390-1' },
++    { chainId: 2391n, shortName: 'tacchain_2391-1' },
++    { chainId: 28n, shortName: 'bobarinkeby' },
+     { chainId: 31n, shortName: 'trsk' },
+     { chainId: 39n, shortName: 'u2u' },
+     { chainId: 40n, shortName: 'telosevm' },

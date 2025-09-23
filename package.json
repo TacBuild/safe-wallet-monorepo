@@ -27,7 +27,8 @@
     "@ethersproject/signing-key/elliptic": "^6.6.1",
     "stylus": "github:stylus/stylus#0.64.0",
     "@safe-global/safe-deployments@npm:^1.37.40": "patch:@safe-global/safe-deployments@npm%3A1.37.35#~/.yarn/patches/@safe-global-safe-deployments-npm-1.37.35-94012db316.patch",
-    "@safe-global/safe-deployments@npm:^1.37.35": "patch:@safe-global/safe-deployments@npm%3A1.37.35#~/.yarn/patches/@safe-global-safe-deployments-npm-1.37.35-94012db316.patch"
+    "@safe-global/safe-deployments@npm:^1.37.35": "patch:@safe-global/safe-deployments@npm%3A1.37.35#~/.yarn/patches/@safe-global-safe-deployments-npm-1.37.35-94012db316.patch",
+    "@safe-global/protocol-kit@npm:^5.1.1": "patch:@safe-global/protocol-kit@npm%3A5.2.8#~/.yarn/patches/@safe-global-protocol-kit-npm-5.2.8-adfcb41eda.patch"
   },
   "devDependencies": {
     "husky": "^9.1.6",
