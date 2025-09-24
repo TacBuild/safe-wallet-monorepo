@@ -47,7 +47,7 @@ export const CookieAndTermBanner = ({
   const dispatch = useAppDispatch()
   const cookies = useAppSelector(selectCookies)
 
-  const { getValues, setValue } = useForm({
+  const { getValues } = useForm({
     defaultValues: {
       [CookieAndTermType.TERMS]: true,
       [CookieAndTermType.NECESSARY]: true,
@@ -68,11 +68,11 @@ export const CookieAndTermBanner = ({
     dispatch(closeCookieBanner())
   }
 
-  const handleAcceptAll = () => {
-    setValue(CookieAndTermType.UPDATES, true)
-    setValue(CookieAndTermType.ANALYTICS, true)
-    setTimeout(handleAccept, 300)
-  }
+  // const handleAcceptAll = () => {
+  //   setValue(CookieAndTermType.UPDATES, true)
+  //   setValue(CookieAndTermType.ANALYTICS, true)
+  //   setTimeout(handleAccept, 300)
+  // }
 
   return (
     <Paper data-testid="cookies-popup" className={classnames(css.container, { [css.inverted]: inverted })}>
@@ -171,11 +171,11 @@ export const CookieAndTermBanner = ({
                 </Typography>
               </Grid>
 
-              <Grid item>
+              {/* <Grid item>
                 <Button onClick={handleAcceptAll} variant="contained" color="secondary" size="small" disableElevation>
                   Accept all
                 </Button>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Grid>
         </Grid>
