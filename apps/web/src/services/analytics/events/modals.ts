@@ -32,10 +32,6 @@ export const MODALS_EVENTS = {
     action: 'Use spending limit',
     category: MODALS_CATEGORY,
   },
-  OPEN_SAFE_UTILS: {
-    action: 'Open Safe Utils',
-    category: MODALS_CATEGORY,
-  },
   SIGNING_ARTICLE: {
     action: 'Open signing article',
     category: MODALS_CATEGORY,
