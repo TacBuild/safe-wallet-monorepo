@@ -5,8 +5,12 @@ import useAsync from '@safe-global/utils/hooks/useAsync'
 import useChainId from '@/hooks/useChainId'
 import useIntervalCounter from '@/hooks/useIntervalCounter'
 import { OpenInNewRounded } from '@mui/icons-material'
+import { IS_PRODUCTION } from '@/config/constants'
 
-const STATUS_PAGE = 'https://status.safe.global'
+const STATUS_PAGE = IS_PRODUCTION
+  ? 'https://tx-status-app.safe.protofire.io/?serviceUrl=https://gateway.safe.tac.build'
+  : 'https://tx-status-app.safe.protofire.io/?serviceUrl=https://gateway.staging.safe.tac.build'
+
 const MAX_SYNC_DELAY = 1000 * 60 * 5 // 5 minutes
 const POLL_INTERVAL = 1000 * 60 // 1 minute
 
@@ -52,6 +56,7 @@ const getStatus = (synced: boolean, lastSync: number) => {
 }
 
 const IndexingStatus = () => {
+  console.log('booom')
   const [data] = useIndexingStatus()
 
   if (!data) {

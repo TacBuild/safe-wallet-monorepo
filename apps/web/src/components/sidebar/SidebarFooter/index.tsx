@@ -51,7 +51,7 @@ const SidebarFooter = (): ReactElement => {
       )}
 
       <ListItem disablePadding>
-        <a target="_blank" rel="noopener noreferrer" href={HELP_CENTER_URL} style={{ width: '100%' }}>
+        <a target="_blank" rel="noopener noreferrer" href={HELP_CENTER_URL} style={{ width: '100%', marginTop: '8px' }}>
           <SidebarListItemButton>
             <SidebarListItemIcon color="primary">
               <HelpCenterIcon />
@@ -63,7 +63,12 @@ const SidebarFooter = (): ReactElement => {
         </a>
       </ListItem>
       <ListItem disablePadding>
-        <a target="_blank" rel="noopener noreferrer" href={NEW_SUGGESTION_FORM} style={{ width: '100%' }}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={NEW_SUGGESTION_FORM}
+          style={{ width: '100%', marginTop: '8px' }}
+        >
           <SidebarListItemButton id={BEAMER_SELECTOR} style={{ backgroundColor: '#12FF80', color: 'black' }}>
             <SidebarListItemIcon color="primary">
               <SuggestionIcon />
@@ -74,7 +79,7 @@ const SidebarFooter = (): ReactElement => {
       </ListItem>
 
       <ListItem>
-        <SidebarListItemText>
+        <SidebarListItemText style={{ marginTop: '8px' }}>
           <Typography variant="caption">
             Supported by{' '}
             <SvgIcon
