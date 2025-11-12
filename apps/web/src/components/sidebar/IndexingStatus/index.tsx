@@ -56,7 +56,6 @@ const getStatus = (synced: boolean, lastSync: number) => {
 }
 
 const IndexingStatus = () => {
-  console.log('booom')
   const [data] = useIndexingStatus()
 
   if (!data) {
