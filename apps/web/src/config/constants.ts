@@ -96,8 +96,7 @@ export enum SafeAppsName {
   CSV = 'CSV Airdrop',
 }
 
-export const NEW_SUGGESTION_FORM =
-  'https://safe-feature-request.protofire.io'
+export const NEW_SUGGESTION_FORM = 'https://safe-feature-request.protofire.io'
 export const RECOVERY_FEEDBACK_FORM =
   'https://noteforms.com/forms/safe-feedback-form-hk16ds?notionforms=1&utm_source=notionforms'
 
