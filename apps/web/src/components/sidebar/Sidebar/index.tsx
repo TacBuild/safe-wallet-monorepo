@@ -54,7 +54,7 @@ const Sidebar = (): ReactElement => {
 
         <Divider flexItem />
 
-        {!IS_PRODUCTION && <IndexingStatus />}
+        {<IndexingStatus />}
       </div>
       <Drawer variant="temporary" anchor="left" open={isDrawerOpen} onClose={onDrawerToggle}>
         <div className={css.drawer}>
