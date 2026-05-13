@@ -9,11 +9,11 @@ const TEMPLATE_CONFIG = {
   SUPPORTED_VERSIONS: ['1.3.0', '1.4.1'],
   LOGO_DIMENSIONS: {
     HEADER: {
-      H: '45px',
+      H: '32px',
     },
     WELCOME: {
-      W: '160px',
-      H: '48px',
+      W: '120px',
+      H: '30px',
     },
   },
   ALLOWANCE_MODULE_OVERRIDE: {
